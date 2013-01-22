@@ -1,6 +1,11 @@
-*.class
 
-# Package Files #
-*.jar
-*.war
-*.ear
+# ignore Maven target directories
+target
+
+
+# ignore IntelliJ Idea files
+.idea
+*.iml
+
+# ignore MacOS files
+.DS_Store
