@@ -9,3 +9,6 @@ target
 
 # ignore MacOS files
 .DS_Store
+
+# do not commit real integration.properties file
+integration.properties

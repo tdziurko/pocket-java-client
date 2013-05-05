@@ -1,0 +1,2 @@
+# To run integration tests please copy or rename this file to integration.properties and provide valid values
+consumer.key =

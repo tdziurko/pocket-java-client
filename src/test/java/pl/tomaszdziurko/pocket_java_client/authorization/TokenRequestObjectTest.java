@@ -1,5 +1,6 @@
 package pl.tomaszdziurko.pocket_java_client.authorization;
 
+import com.google.gson.Gson;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -31,6 +32,19 @@ public class TokenRequestObjectTest {
             assertThat(e).isExactlyInstanceOf(expectedException);
             assertThat(e).hasMessage(expectedMessage);
         }
+    }
+
+    @Test
+    public void shouldConvertToJsonWhenStateIsNull() {
+        // Given
+        TokenRequestObject requestObject = new TokenRequestObject("1234-asdf-asdf", "http://localhost", null);
+
+        // When
+        Gson gson = new Gson();
+        String json = gson.toJson(requestObject);
+
+        // Then
+        assertThat(json).isEqualTo("{\"consumer_key\":\"1234-asdf-asdf\",\"redirect_uri\":\"http://localhost\"}");
     }
 
 }
