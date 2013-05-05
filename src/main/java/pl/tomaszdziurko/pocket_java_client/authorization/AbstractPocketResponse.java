@@ -2,9 +2,11 @@ package pl.tomaszdziurko.pocket_java_client.authorization;
 
 import pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus;
 
+import static pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus.OK;
+
 public abstract class AbstractPocketResponse {
 
-    private ResponseStatus responseStatus = ResponseStatus.OK; // default value for valid responses
+    private ResponseStatus responseStatus = OK; // default value for valid responses
 
     protected AbstractPocketResponse() {
     }
@@ -15,5 +17,9 @@ public abstract class AbstractPocketResponse {
 
     public ResponseStatus getResponseStatus() {
         return responseStatus;
+    }
+
+    public boolean isOk() {
+        return OK == responseStatus;
     }
 }
