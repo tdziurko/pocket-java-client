@@ -15,20 +15,10 @@ public class PocketTest {
         // Given
 
         // When
-        catchException(pocket).add(" ", "Title");
+        catchException(pocket).addArticle(" ");
 
         // Then
         assertThat(caughtException()).isInstanceOf(IllegalArgumentException.class);
         assertThat(caughtException().getMessage()).contains("Article url");
-    }
-
-    @Test
-    public void shouldThrowExceptionOnMissingTitleForAddedItem() {
-        // When
-        catchException(pocket).add("http://tomaszdziurko.pl", "");
-
-        // Then
-        assertThat(caughtException()).isInstanceOf(IllegalArgumentException.class);
-        assertThat(caughtException().getMessage()).contains("Title");
     }
 }

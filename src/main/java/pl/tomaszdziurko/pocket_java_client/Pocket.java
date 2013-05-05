@@ -20,8 +20,8 @@ public class Pocket {
         requestSender = new RequestSender();
     }
 
-    public void add(String url, String title) {
-        AddItemRequest addItem = new AddItemRequest(consumer_key, access_token, url, title);
+    public void addArticle(String url) {
+        AddItemRequest addItem = new AddItemRequest(consumer_key, access_token, url);
 
         requestSender.sendRequest(addItem, "https://getpocket.com/v3/add");
     }
