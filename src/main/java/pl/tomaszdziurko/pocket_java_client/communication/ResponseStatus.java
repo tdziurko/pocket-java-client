@@ -23,6 +23,10 @@ public enum ResponseStatus {
         this.code = code;
     }
 
+    public int getCode() {
+        return code;
+    }
+
     public boolean isOk() {
         return OK == this;
     }
