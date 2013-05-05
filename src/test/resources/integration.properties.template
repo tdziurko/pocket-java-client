@@ -1,2 +1,5 @@
 # To run integration tests please copy or rename this file to integration.properties and provide valid values
 consumer.key =
+already.approved.consumer.key =
+not.approved.consumer.key =
+access.token =
