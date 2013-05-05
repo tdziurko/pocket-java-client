@@ -3,6 +3,7 @@ package pl.tomaszdziurko.pocket_java_client.authorization;
 import com.google.gson.Gson;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+import pl.tomaszdziurko.pocket_java_client.communication.GsonProducer;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.testng.AssertJUnit.fail;
@@ -40,7 +41,7 @@ public class TokenRequestObjectTest {
         TokenRequestObject requestObject = new TokenRequestObject("1234-asdf-asdf", "http://localhost", null);
 
         // When
-        Gson gson = new Gson();
+        Gson gson = GsonProducer.create();
         String json = gson.toJson(requestObject);
 
         // Then

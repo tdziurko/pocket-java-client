@@ -1,7 +1,8 @@
-package pl.tomaszdziurko.pocket_java_client.communication.dataobjects;
+package pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add;
 
 import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.StringUtils;
+import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.AbstractPocketRequest;
 
 public class AddItemRequest extends AbstractPocketRequest {
 

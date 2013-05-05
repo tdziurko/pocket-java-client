@@ -12,7 +12,7 @@ public class RequestSender {
 
     public RequestSender() {
         responseStatusExtractor = new ResponseStatusExtractor();
-        gson = new Gson();
+        gson = GsonProducer.create();
     }
 
     public RawJsonResponse sendRequest(Object data, String url) {

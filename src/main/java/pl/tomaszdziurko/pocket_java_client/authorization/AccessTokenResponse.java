@@ -4,7 +4,7 @@ import pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus;
 
 public class AccessTokenResponse extends AbstractAuthorizationResponse {
 
-    private String access_token;
+    private String accessToken;
     private String username;
 
     public AccessTokenResponse() {
@@ -15,7 +15,7 @@ public class AccessTokenResponse extends AbstractAuthorizationResponse {
     }
 
     public String getAccessToken() {
-        return access_token;
+        return accessToken;
     }
 
     public String getUsername() {

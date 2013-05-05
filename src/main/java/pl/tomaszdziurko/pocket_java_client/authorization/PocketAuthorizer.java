@@ -3,6 +3,7 @@ package pl.tomaszdziurko.pocket_java_client.authorization;
 import com.google.common.base.Preconditions;
 import com.google.gson.Gson;
 import org.apache.commons.lang3.StringUtils;
+import pl.tomaszdziurko.pocket_java_client.communication.GsonProducer;
 import pl.tomaszdziurko.pocket_java_client.communication.RawJsonResponse;
 import pl.tomaszdziurko.pocket_java_client.communication.RequestSender;
 
@@ -12,7 +13,7 @@ public class PocketAuthorizer {
     private RequestSender requestSender;
 
     public PocketAuthorizer() {
-        gson = new Gson();
+        gson = GsonProducer.create();
         requestSender = new RequestSender();
     }
 

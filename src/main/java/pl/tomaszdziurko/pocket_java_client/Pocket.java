@@ -3,25 +3,25 @@ package pl.tomaszdziurko.pocket_java_client;
 import com.google.common.base.Preconditions;
 import org.apache.commons.lang3.StringUtils;
 import pl.tomaszdziurko.pocket_java_client.communication.RequestSender;
-import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.AddItemRequest;
+import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add.AddItemRequest;
 
 public class Pocket {
 
-    private String consumer_key;
-    private String access_token;
+    private String consumerKey;
+    private String accessToken;
     private RequestSender requestSender;
 
-    public Pocket(String consumer_key, String access_token) {
-        Preconditions.checkArgument(StringUtils.isNotBlank(consumer_key), "Consumer Key must be provided");
-        Preconditions.checkArgument(StringUtils.isNotBlank(access_token), "Access Token must be provided");
+    public Pocket(String consumerKey, String accessToken) {
+        Preconditions.checkArgument(StringUtils.isNotBlank(consumerKey), "Consumer Key must be provided");
+        Preconditions.checkArgument(StringUtils.isNotBlank(accessToken), "Access Token must be provided");
 
-        this.consumer_key = consumer_key;
-        this.access_token = access_token;
+        this.consumerKey = consumerKey;
+        this.accessToken = accessToken;
         requestSender = new RequestSender();
     }
 
     public void addArticle(String url) {
-        AddItemRequest addItem = new AddItemRequest(consumer_key, access_token, url);
+        AddItemRequest addItem = new AddItemRequest(consumerKey, accessToken, url);
 
         requestSender.sendRequest(addItem, "https://getpocket.com/v3/add");
     }

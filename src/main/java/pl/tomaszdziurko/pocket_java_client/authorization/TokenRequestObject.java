@@ -6,25 +6,25 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 public class TokenRequestObject {
 
-    private String consumer_key;
-    private String redirect_uri;
+    private String consumerKey;
+    private String redirectUri;
     private String state;
 
     public TokenRequestObject(String consumerKey, String redirectUri, String state) {
         Preconditions.checkArgument(StringUtils.isNotBlank(consumerKey), "Consumer key must be provided");
         Preconditions.checkArgument(StringUtils.isNotBlank(redirectUri), "Redirect uri must be provided");
 
-        this.consumer_key = consumerKey;
-        this.redirect_uri = redirectUri;
+        this.consumerKey = consumerKey;
+        this.redirectUri = redirectUri;
         this.state = state;
     }
 
     public String getConsumerKey() {
-        return consumer_key;
+        return consumerKey;
     }
 
     public String getRedirectUri() {
-        return redirect_uri;
+        return redirectUri;
     }
 
     public String getState() {
