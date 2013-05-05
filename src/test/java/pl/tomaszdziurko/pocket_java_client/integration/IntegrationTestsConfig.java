@@ -37,4 +37,8 @@ public class IntegrationTestsConfig {
         return properties.getProperty("not.approved.consumer.key");
     }
 
+    public String getAccessToken() {
+        return properties.getProperty("access.token");
+    }
+
 }
