@@ -21,12 +21,12 @@ public class RequestSender {
                 .header("X-Accept", "application/json")
                 .post(url);
         ResponseStatus status = responseStatusExtractor.getStatus(response.getHeaders());
+        String responseString = response.asString();
 
         if (status.isOk()) {
-            return RawJsonResponse.ok(response.asString());
+            return RawJsonResponse.ok(responseString);
         } else {
             return RawJsonResponse.invalid(status);
         }
-
     }
 }
