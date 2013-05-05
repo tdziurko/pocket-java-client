@@ -13,12 +13,16 @@ public class AuthorizationTestIT {
 
     @Test
     public void shouldReceiveRequestToken() {
+        // Given
+        String state = "example-state";
+
         // Then
-        TokenRequestResponse requestToken = client.getRequestToken(IntegrationTestsConfig.get().getConsumerKey(), "url", null);
+        TokenRequestResponse requestToken = client.getRequestToken(IntegrationTestsConfig.get().getConsumerKey(), "url", state);
 
         // When
         assertThat(requestToken.getResponseStatus().isOk()).isTrue();
         assertThat(requestToken.getCode()).isNotEmpty();
+        assertThat(requestToken.getState()).isEqualTo(state);
     }
 
     @Test
@@ -31,15 +35,4 @@ public class AuthorizationTestIT {
         assertThat(requestToken.getCode()).isNull();
     }
 
-    @Test
-    public void shouldReceiveStateWithRequestToken() {
-        // Given
-        String state = "example-state";
-
-        // Then
-        TokenRequestResponse requestToken = client.getRequestToken(IntegrationTestsConfig.get().getConsumerKey(), "url", state);
-
-        // When
-        assertThat(requestToken.getState()).isEqualTo(state);
-    }
 }
