@@ -1,6 +1,7 @@
 package pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
+import org.joda.time.DateTime;
 
 public class AddedItem {
 
@@ -14,15 +15,15 @@ public class AddedItem {
     private String mimeType;
     private Long contentLength;
     private String encoding;
-    private String dateResolved;
-    private String datePublished;
+    private DateTime dateResolved;
+    private DateTime datePublished;
     private String title;
     private String excerpt;
     private Long wordCount;
-    private String hasImage;
-    private String hasVideo;
-    private String isIndex;
-    private String isArticle;
+    private Boolean hasImage;
+    private Boolean hasVideo;
+    private Boolean isIndex;
+    private Boolean isArticle;
 
     // TODO Not yet implemented
     // private List authors;
@@ -70,11 +71,11 @@ public class AddedItem {
         return encoding;
     }
 
-    public String getDateResolved() {
+    public DateTime getDateResolved() {
         return dateResolved;
     }
 
-    public String getDatePublished() {
+    public DateTime getDatePublished() {
         return datePublished;
     }
 
@@ -90,19 +91,19 @@ public class AddedItem {
         return wordCount;
     }
 
-    public String getHasImage() {
+    public Boolean hasImage() {
         return hasImage;
     }
 
-    public String getHasVideo() {
+    public Boolean hasVideo() {
         return hasVideo;
     }
 
-    public String getIndex() {
+    public Boolean isIndex() {
         return isIndex;
     }
 
-    public String getArticle() {
+    public Boolean isArticle() {
         return isArticle;
     }
 

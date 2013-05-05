@@ -1,7 +1,7 @@
 package pl.tomaszdziurko.pocket_java_client;
 
 import com.google.gson.Gson;
-import pl.tomaszdziurko.pocket_java_client.communication.GsonProducer;
+import pl.tomaszdziurko.pocket_java_client.communication.gson.GsonProducer;
 import pl.tomaszdziurko.pocket_java_client.communication.RawJsonResponse;
 import pl.tomaszdziurko.pocket_java_client.communication.RequestSender;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add.AddItemRequest;

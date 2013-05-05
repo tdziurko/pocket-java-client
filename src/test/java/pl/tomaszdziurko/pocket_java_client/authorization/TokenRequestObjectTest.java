@@ -3,7 +3,7 @@ package pl.tomaszdziurko.pocket_java_client.authorization;
 import com.google.gson.Gson;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import pl.tomaszdziurko.pocket_java_client.communication.GsonProducer;
+import pl.tomaszdziurko.pocket_java_client.communication.gson.GsonProducer;
 
 import static org.fest.assertions.Assertions.assertThat;
 import static org.testng.AssertJUnit.fail;

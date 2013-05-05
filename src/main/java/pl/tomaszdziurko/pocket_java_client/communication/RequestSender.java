@@ -2,6 +2,7 @@ package pl.tomaszdziurko.pocket_java_client.communication;
 
 import com.google.gson.Gson;
 import com.jayway.restassured.response.Response;
+import pl.tomaszdziurko.pocket_java_client.communication.gson.GsonProducer;
 
 import static com.jayway.restassured.RestAssured.with;
 
