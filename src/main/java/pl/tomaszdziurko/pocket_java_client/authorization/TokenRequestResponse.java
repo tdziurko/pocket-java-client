@@ -2,7 +2,7 @@ package pl.tomaszdziurko.pocket_java_client.authorization;
 
 import pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus;
 
-public class TokenRequestResponse extends AbstractPocketResponse {
+public class TokenRequestResponse extends AbstractAuthorizationResponse {
 
     private String code;
     private String state;

@@ -4,14 +4,14 @@ import pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus;
 
 import static pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus.OK;
 
-public abstract class AbstractPocketResponse {
+public abstract class AbstractAuthorizationResponse {
 
     private ResponseStatus responseStatus = OK; // default value for valid responses
 
-    protected AbstractPocketResponse() {
+    protected AbstractAuthorizationResponse() {
     }
 
-    public AbstractPocketResponse(ResponseStatus responseStatus) {
+    public AbstractAuthorizationResponse(ResponseStatus responseStatus) {
         this.responseStatus = responseStatus;
     }
 
