@@ -5,22 +5,22 @@ import org.apache.commons.lang3.StringUtils;
 
 public class AbstractPocketRequest {
 
-    private String consumer_key;
-    private String access_token;
+    private String consumerKey;
+    private String accessToken;
 
-    public AbstractPocketRequest(String consumer_key, String access_token) {
-        Preconditions.checkArgument(StringUtils.isNotBlank(consumer_key), "Consumer Key must be provided");
-        Preconditions.checkArgument(StringUtils.isNotBlank(access_token), "Access Token must be provided");
+    public AbstractPocketRequest(String consumerKey, String accessToken) {
+        Preconditions.checkArgument(StringUtils.isNotBlank(consumerKey), "Consumer Key must be provided");
+        Preconditions.checkArgument(StringUtils.isNotBlank(accessToken), "Access Token must be provided");
 
-        this.consumer_key = consumer_key;
-        this.access_token = access_token;
+        this.consumerKey = consumerKey;
+        this.accessToken = accessToken;
     }
 
     public String getConsumerKey() {
-        return consumer_key;
+        return consumerKey;
     }
 
     public String getAccessToken() {
-        return access_token;
+        return accessToken;
     }
 }
