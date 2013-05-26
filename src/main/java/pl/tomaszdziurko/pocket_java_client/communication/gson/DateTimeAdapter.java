@@ -15,7 +15,7 @@ import java.lang.reflect.Type;
 
 public class DateTimeAdapter implements JsonSerializer<DateTime>, JsonDeserializer<DateTime> {
 
-    DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd hh:mm:sss");
+    DateTimeFormatter formatter = DateTimeFormat.forPattern("yyyy-MM-dd HH:mm:sss");
 
     public JsonElement serialize(DateTime dateTime, Type type, JsonSerializationContext jsonSerializationContext) {
         return new JsonPrimitive(dateTime.toString(formatter));
