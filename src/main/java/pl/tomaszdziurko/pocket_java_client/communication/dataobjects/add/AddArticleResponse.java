@@ -4,15 +4,15 @@ import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import pl.tomaszdziurko.pocket_java_client.communication.ResponseStatus;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.AbstractPocketResponse;
 
-public class AddItemResponse extends AbstractPocketResponse {
+public class AddArticleResponse extends AbstractPocketResponse {
 
-    private AddedItem item;
+    private AddedArticle item;
 
-    public AddItemResponse(ResponseStatus status) {
+    public AddArticleResponse(ResponseStatus status) {
         super(status);
     }
 
-    public AddedItem getItem() {
+    public AddedArticle getArticle() {
         return item;
     }
 

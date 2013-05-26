@@ -3,7 +3,7 @@ package pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.joda.time.DateTime;
 
-public class AddedItem {
+public class AddedArticle {
 
     private Long itemId;
     private String normalUrl;
