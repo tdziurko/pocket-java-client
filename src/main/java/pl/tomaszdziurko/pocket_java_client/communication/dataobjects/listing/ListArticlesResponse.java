@@ -27,24 +27,16 @@ public class ListArticlesResponse extends AbstractPocketResponse {
         return complete;
     }
 
-    public void setComplete(Integer complete) {
-        this.complete = complete;
-    }
-
     public List<Article> getList() {
         return list;
     }
 
-    public void setList(List<Article> list) {
-        this.list = list;
+    public boolean hasArticles() {
+        return list != null && list.size() > 0;
     }
 
     public Long getSince() {
         return since;
-    }
-
-    public void setSince(Long since) {
-        this.since = since;
     }
 
     @Override
