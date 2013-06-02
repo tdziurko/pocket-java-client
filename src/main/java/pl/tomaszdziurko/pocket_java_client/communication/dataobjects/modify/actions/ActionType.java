@@ -11,10 +11,6 @@ public enum ActionType {
     TAGS_REMOVE,
     TAGS_REPLACE,
     TAGS_CLEAR,
-    TAGS_RENAME;
+    TAGS_RENAME
 
-    @Override
-    public String toString() {
-        return name().toLowerCase();
-    }
 }
