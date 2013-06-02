@@ -1,21 +1,13 @@
 package pl.tomaszdziurko.pocket_java_client;
 
-import com.google.gson.Gson;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add.AddArticleResponse;
-import pl.tomaszdziurko.pocket_java_client.communication.gson.GsonProducer;
 import pl.tomaszdziurko.pocket_java_client.communication.RawJsonResponse;
-import pl.tomaszdziurko.pocket_java_client.communication.RequestSender;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add.AddItemRequest;
 
-public class AddService {
-    private Pocket pocket;
-    private Gson gson;
-    private RequestSender requestSender;
+public class AddService extends AbstractService {
 
     public AddService(Pocket pocket) {
-        this.pocket = pocket;
-        gson = GsonProducer.create();
-        requestSender = new RequestSender();
+        super(pocket);
     }
 
     public AddArticleResponse with(String url) {

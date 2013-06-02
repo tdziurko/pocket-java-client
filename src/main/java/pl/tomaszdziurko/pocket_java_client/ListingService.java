@@ -1,32 +1,23 @@
 package pl.tomaszdziurko.pocket_java_client;
 
 import com.google.common.base.Preconditions;
-import com.google.gson.Gson;
 import org.joda.time.DateTime;
 import pl.tomaszdziurko.pocket_java_client.communication.RawJsonResponse;
-import pl.tomaszdziurko.pocket_java_client.communication.RequestSender;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.listing.Article;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.listing.ArticleListingRootData;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.listing.ArticleState;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.listing.ListArticlesRequest;
 import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.listing.ListArticlesResponse;
-import pl.tomaszdziurko.pocket_java_client.communication.gson.GsonProducer;
 import pl.tomaszdziurko.pocket_java_client.parsers.ArticlesListFromJsonExtractor;
 
-import java.util.Date;
 import java.util.List;
 
-public class ListingService {
+public class ListingService extends AbstractService {
 
-    private Pocket pocket;
-    private Gson gson;
-    private RequestSender requestSender;
     private ArticlesListFromJsonExtractor articlesListFromJsonResponseExtractor;
 
     public ListingService(Pocket pocket) {
-        this.pocket = pocket;
-        gson = GsonProducer.create();
-        requestSender = new RequestSender();
+        super(pocket);
         articlesListFromJsonResponseExtractor = new ArticlesListFromJsonExtractor(gson);
     }
 
