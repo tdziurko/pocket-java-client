@@ -2,7 +2,7 @@ package pl.tomaszdziurko.pocket_java_client.communication.dataobjects.listing;
 
 public enum ArticleState {
 
-    UNDREAD,
+    UNREAD,
     ARCHIVE,
     ALL;
 

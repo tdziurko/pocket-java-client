@@ -2,13 +2,11 @@ package pl.tomaszdziurko.pocket_java_client.communication.dataobjects.add;
 
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.joda.time.DateTime;
+import pl.tomaszdziurko.pocket_java_client.communication.dataobjects.AbstractArticle;
 
-public class AddedArticle {
+public class AddedArticle extends AbstractArticle {
 
-    private Long itemId;
     private String normalUrl;
-    private Long resolvedId;
-    private String resolvedUrl;
     private Long domainId;
     private Long originDomainId;
     private Long responseCode;
@@ -18,33 +16,11 @@ public class AddedArticle {
     private DateTime dateResolved;
     private DateTime datePublished;
     private String title;
-    private String excerpt;
-    private Long wordCount;
-    private Boolean hasImage;
-    private Boolean hasVideo;
     private Boolean isIndex;
-    private Boolean isArticle;
 
-    // TODO Not yet implemented
-    // private List authors;
-    // private List images;
-    // private List videos;
-
-
-    public Long getItemId() {
-        return itemId;
-    }
 
     public String getNormalUrl() {
         return normalUrl;
-    }
-
-    public Long getResolvedId() {
-        return resolvedId;
-    }
-
-    public String getResolvedUrl() {
-        return resolvedUrl;
     }
 
     public Long getDomainId() {
@@ -83,28 +59,8 @@ public class AddedArticle {
         return title;
     }
 
-    public String getExcerpt() {
-        return excerpt;
-    }
-
-    public Long getWordCount() {
-        return wordCount;
-    }
-
-    public Boolean hasImage() {
-        return hasImage;
-    }
-
-    public Boolean hasVideo() {
-        return hasVideo;
-    }
-
     public Boolean isIndex() {
         return isIndex;
-    }
-
-    public Boolean isArticle() {
-        return isArticle;
     }
 
     @Override
