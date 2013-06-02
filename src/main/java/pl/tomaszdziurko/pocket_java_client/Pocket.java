@@ -10,6 +10,7 @@ public class Pocket {
 
     private AddService addService;
     private ListingService listingService;
+    private ModifyService modifyService;
 
     public Pocket(String consumerKey, String accessToken) {
         Preconditions.checkArgument(StringUtils.isNotBlank(consumerKey), "Consumer Key must be provided");
@@ -20,6 +21,8 @@ public class Pocket {
 
         addService = new AddService(this);
         listingService = new ListingService(this);
+        modifyService = new ModifyService(this);
+
     }
 
     public AddService addArticle() {
@@ -28,6 +31,10 @@ public class Pocket {
 
     public ListingService listArticles() {
         return listingService;
+    }
+
+    public ModifyService modifyArticles() {
+        return modifyService;
     }
 
     public String getConsumerKey() {

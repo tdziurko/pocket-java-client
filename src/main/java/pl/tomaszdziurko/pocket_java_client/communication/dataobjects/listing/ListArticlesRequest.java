@@ -29,7 +29,7 @@ public class ListArticlesRequest extends AbstractPocketRequest {
     }
 
     public ListArticlesRequest withState(ArticleState state) {
-        state = state;
+        this.state = state;
         return this;
     }
 
