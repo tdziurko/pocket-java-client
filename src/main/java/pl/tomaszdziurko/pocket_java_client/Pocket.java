@@ -1,16 +1,12 @@
 package pl.tomaszdziurko.pocket_java_client;
 
 import com.google.common.base.Preconditions;
-import com.google.gson.Gson;
 import org.apache.commons.lang3.StringUtils;
-import pl.tomaszdziurko.pocket_java_client.communication.RequestSender;
 
 public class Pocket {
 
     private String consumerKey;
     private String accessToken;
-    private Gson gson;
-    private RequestSender requestSender;
 
     private AddService addService;
     private ListingService listingService;
