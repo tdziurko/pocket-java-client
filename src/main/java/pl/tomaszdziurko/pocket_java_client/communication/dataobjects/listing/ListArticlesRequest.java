@@ -28,4 +28,9 @@ public class ListArticlesRequest extends AbstractPocketRequest {
         return this;
     }
 
+    public ListArticlesRequest withState(ArticleState state) {
+        state = state;
+        return this;
+    }
+
 }
